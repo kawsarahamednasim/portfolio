@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Kawsar Ahamed Nasim</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .project-detail-section {
+            padding: 60px 0 100px;
+        }
+
+        .project-detail-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .project-detail-header {
+            margin-bottom: 35px;
+        }
+
+        .project-detail-header h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin: 10px 0;
+            color: #111827;
+        }
+
+        .project-tools-badge {
+            display: inline-block;
+            background: #eef0f3;
+            color: #374151;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .project-detail-media {
+            margin-bottom: 45px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            background: #eef0f3;
+            border: 1px solid #e5e7eb;
+        }
+
+        .detail-main-img {
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .detail-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            padding: 16px;
+            background: #f1f3f5;
+        }
+
+        .detail-gallery-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        .detail-gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .project-detail-content h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+            color: #111827;
+        }
+
+        .project-detail-content p {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .project-deliverables-box {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+        }
+
+        .project-deliverables-box h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .project-deliverables-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-deliverables-box li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 12px;
+            color: #4b5563;
+            font-size: 15px;
+        }
+
+        .project-deliverables-box li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #10b981;
+            font-weight: 800;
+        }
+
+        .project-detail-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        @media (max-width: 600px) {
+            .detail-gallery-grid { grid-template-columns: 1fr; }
+            .detail-gallery-img { height: 200px; }
+            .project-detail-actions { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container nav-container">
+        <a href="index.html#home" class="logo">
+            Kawsar <span>Ahamed Nasim</span>
+        </a>
+        <a href="index.html#projects" class="secondary-button bottom-fill-btn">
+            ← Back to Portfolio
+        </a>
+    </div>
+</header>
+
+<main class="section project-detail-section">
+    <div class="container project-detail-container">
+
+        <div class="project-detail-header reveal-on-scroll is-visible">
+            <span id="detail-category" class="eyebrow">CATEGORY</span>
+            <h1 id="detail-title">Project Title</h1>
+            <p id="detail-tools" class="project-tools-badge">Tools Used</p>
+        </div>
+
+        <div id="detail-media" class="project-detail-media reveal-on-scroll is-visible delay-1">
+            <!-- Full size image or gallery render -->
+        </div>
+
+        <div class="project-detail-content reveal-on-scroll is-visible delay-2">
+            <h2>Overview & Objective</h2>
+            <p id="detail-description">Project full description content goes here.</p>
+
+            <div class="project-deliverables-box">
+                <h3>Key Deliverables & Value Provided</h3>
+                <ul id="detail-deliverables">
+                    <li>High quality accuracy and precise formatting</li>
+                    <li>Clean structure built for professional presentations</li>
+                </ul>
+            </div>
+
+            <div class="project-detail-actions">
+                <a href="index.html#projects" class="secondary-button bottom-fill-btn">← Back to All Projects</a>
+                <button id="detail-contact-btn" class="primary-button bottom-fill-btn">Discuss Similar Project</button>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <div>
+            <strong>Kawsar Ahamed Nasim</strong>
+            <p>Administrative & Digital Creative Specialist</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2026 Kawsar Ahamed Nasim. All rights reserved.
+    </div>
+</footer>
+
+<script>
+const projectData = {
+    "excel-data": {
+        title: "Excel Data Organization & Financial Analytics",
+        category: "ADMIN & DATA",
+        tools: "Excel · Power Query · Data Entry · Spreadsheet Formatting",
+        image: "photo/excel.png",
+        description: "Organized, cleaned, and formatted extensive multi-tab business financial data into a streamlined master spreadsheet workbook. Designed automated Power Query linkage, customized formulas, and visual dashboard summaries to give stakeholders clear insights.",
+        deliverables: [
+            "Data sanitization and duplicate elimination across 1,000+ records",
+            "Formula setup for automated monthly summary reports",
+            "Custom color-coded table styling for executive review"
+        ]
+    },
+    "web-research": {
+        title: "Business Web Research & Lead Intelligence Gathering",
+        category: "RESEARCH",
+        tools: "Web Research · Data Scraping · Excel Dataset Management",
+        image: "photo/research.png",
+        description: "Conducted in-depth online market research to compile verified business contacts, company profiles, and industry leads. Filtered key decision-maker information into structured, easy-to-navigate datasets for outreach campaigns.",
+        deliverables: [
+            "Verified contact list compilation with zero bounce rate targets",
+            "Competitor benchmarking and service comparison reports",
+            "Clean data column structure organized by region and sector"
+        ]
+    },
+    "pdf-editing": {
+        title: "Image / Scan to Editable PDF & Document Conversion",
+        category: "PDF & DOCUMENTS",
+        tools: "PDF Editing · OCR Technology · Document Formatting",
+        image: "photo/pdf.png",
+        description: "Converted scanned document images, contracts, and printed pages into clean, editable digital PDF and Word documents. Preserved original document layout, fonts, margins, and brand styling while making text searchable and selectable.",
+        deliverables: [
+            "High-accuracy OCR document text conversion",
+            "Replaced blurry scan artifacts with crisp vector typography",
+            "Configured fillable form fields for interactive client use"
+        ]
+    },
+    "canva-design": {
+        title: "Restaurant Social Media Template Collection",
+        category: "CANVA DESIGN",
+        tools: "Canva Pro · Brand Identity · Social Media Marketing",
+        image: "photo/canva-template.png",
+        description: "Created a cohesive, reusable collection of Canva templates tailored for restaurant social media marketing. Formatted specifically for Instagram and Facebook feeds to boost engagement and highlight daily menu specials.",
+        deliverables: [
+            "Editable multi-page promotional story and feed templates",
+            "Custom color palette and typography hierarchy setup",
+            "Fast drag-and-drop placeholder layout for non-designers"
+        ]
+    },
+    "product-mockups": {
+        title: "Food & Product Promotional Mockup Collection",
+        category: "MOCKUP DESIGN",
+        tools: "Canva Pro · Product Mockups · Commercial Advertising",
+        images: ["photo/PLATE & PIXEL.png", "photo/combo.png", "photo/Desert item.png", "photo/Last Chance.png"],
+        description: "Designed high-impact, studio-quality promotional mockups featuring burgers, desserts, and beverage combos for restaurant advertising. Applied dramatic lighting, realistic depth, and appetite-appealing typography.",
+        deliverables: [
+            "Exploded view burger layer breakdown infographic",
+            "Value combo meal promotional banners ($11.99 promo)",
+            "Dessert feature graphic with sleek dark-mode studio backdrop"
+        ]
+    },
+    "video-editing": {
+        title: "Short-Form Promotional Video Editing",
+        category: "VIDEO EDITING",
+        tools: "Video Editing · Transitions · Caption Styling · Audio Mixing",
+        image: "photo/video.png",
+        description: "Produced engaging short-form video content tailored for social media Reels, TikTok, and YouTube Shorts. Integrated dynamic cuts, kinetic text captions, smooth transitions, and background music to maximize audience watch time.",
+        deliverables: [
+            "Paced video cuts optimized for high engagement",
+            "Animated text captions and key visual highlights",
+            "Audio normalization and royalty-free background music sync"
+        ]
+    },
+    "shopify-support": {
+        title: "Shopify Store Maintenance & Product Catalog Management",
+        category: "E-COMMERCE",
+        tools: "Shopify · Product Catalog · Dropshipping · SEO Descriptions",
+        image: "photo/shopify.png",
+        description: "Managed complete product catalog uploads, variant configurations, SEO description optimization, and high-resolution photo listing updates for Shopify e-commerce storefronts.",
+        deliverables: [
+            "Product catalog organization and category tag mapping",
+            "Persuasive, conversion-focused product description copy",
+            "Optimized product images for fast web page loading speeds"
+        ]
+    }
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id') || 'excel-data';
+const item = projectData[id] || projectData['excel-data'];
+
+document.getElementById('detail-title').innerText = item.title;
+document.getElementById('detail-category').innerText = item.category;
+document.getElementById('detail-tools').innerText = item.tools;
+document.getElementById('detail-description').innerText = item.description;
+
+const deliverablesUl = document.getElementById('detail-deliverables');
+deliverablesUl.innerHTML = item.deliverables.map(d => `<li>${d}</li>`).join('');
+
+const mediaContainer = document.getElementById('detail-media');
+if (item.images && item.images.length > 0) {
+    mediaContainer.innerHTML = `<div class="detail-gallery-grid">${item.images.map(img => `<img src="${img}" alt="${item.title}" class="detail-gallery-img">`).join('')}</div>`;
+} else {
+    mediaContainer.innerHTML = `<img src="${item.image}" alt="${item.title}" class="detail-main-img" onerror="this.src='photo/PLATE & PIXEL.png'">`;
+}
+
+document.getElementById('detail-contact-btn').addEventListener('click', () => {
+    const confirmChoice = confirm("Would you like to compose an email to Kawsar Ahamed Nasim (mdnasim70470@gmail.com)?");
+    if (confirmChoice) {
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=mdnasim70470@gmail.com&su=${encodeURIComponent("Inquiry regarding " + item.title)}`;
+        window.open(gmailUrl, "_blank");
+    }
+});
+</script>
+</body>
+</html>
